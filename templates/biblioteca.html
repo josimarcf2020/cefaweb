@@ -1,0 +1,120 @@
+{% extends "padrao.html" %}
+{% block body %}
+    <main>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#pessoas" role="tab" aria-controls="home" aria-selected="true">
+                    <img src="./../static/img/publico.png" width="20vw" alt=""> Pessoas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#obras" role="tab" aria-controls="profile" aria-selected="false">
+                    <img src="./../static/img/biblioteca.png" alt="" width="20vw"> Obras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contato" role="tab" aria-controls="contact" aria-selected="false">
+                    <img src="./../static/img/design-de-interface-do-usuario.png" alt="" width="20vw"> Movimento
+                </a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" id="pessoas" role="tabpanel" aria-labelledby="home-tab">
+                <p class="titulo_pagina">Listagem de Pessoas Cadastradas</p>
+                <div class="add">
+                    <a href="/biblioteca/cadastra_pessoa"><img src="./../static/img/novo-usuario.png" alt="" width="40vw"></a>
+                </div>
+                <div class="input-group mb-5" id="pesquisar">
+                    <input type="text" class="form-control" placeholder="Digite o nome a buscar" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="./../static/img/pesquisa-de-pesquisa.png" alt="" width="20vw"> Pesquisar</button>
+                    </div>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">NOME</th>
+                            <th scope="col">SOBRENOME</th>
+                            <th scope="col">ADMISSÃO</th>
+                            <th scope="col">STATUS</th>
+                            <th scope="colgroup">AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>01/01/2023</td>
+                            <td>Ativo</td>
+                            <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                            <td><button type="button" class="btn btn-danger">Deletar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>12/02/2020</td>
+                            <td>Ativo</td>
+                            <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                            <td><button type="button" class="btn btn-danger">Deletar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>12/03/2020</td>
+                            <td>Bloqueado</td>
+                            <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                            <td><button type="button" class="btn btn-danger">Deletar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="obras" role="tabpanel" aria-labelledby="profile-tab">
+                <p class="titulo_pagina">Listagem de Obras/Livros Cadastrados</p>
+                <div class="add">
+                    <a href="/biblioteca/cadastra_obra"><img src="./../static/img/adicionar.png" alt="" width="40vw"></a>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">OBRA / LIVRO</th>
+                            <th scope="col">AUTOR</th>
+                            <th scope="col">EDITORA</th>
+                            <th scope="colgroup">AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>01/01/2023</td>
+                            <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                            <td><button type="button" class="btn btn-danger">Deletar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>12/02/2020</td>
+                            <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                            <td><button type="button" class="btn btn-danger">Deletar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>12/03/2020</td>
+                            <td><button type="button" class="btn btn-secondary">Editar</button></td>
+                            <td><button type="button" class="btn btn-danger">Deletar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="contato" role="tabpanel" aria-labelledby="contact-tab">
+                contato
+            </div>
+          </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "padrao.html" %}
+{% block body %}
+    <main>
+        <nav>
+            <ul class="menu">
+                <li><a href="#"><img src="./../static/img/publico.png" alt="" width="20px"> Público</a></li>
+                <li><a href="#"><img src="./../static/img/gestao.png" alt="" width="20px"> Gestão</a>
+                    <ul>
+                        <li><a href="/biblioteca"><img src="./../static/img/biblioteca.png" alt="" width="20px"> Biblioteca</a></li>
+                        <li><a href="#"><img src="./../static/img/equipe.png" alt="" width="20px"> Pessoas</a></li>
+                        <li><a href="#"><img src="./../static/img/design-de-interface-do-usuario.png" alt="" width="20px"> Usuários</a></li>
+                        <li><hr></li>
+                        <li><a href="#"><img src="./../static/img/caixa-de-ferramentas.png" alt="" width="20px"> Configurações</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="./../static/img/relatorio-anual.png" width="20px" alt=""> Financeiro</a></li>
+            </ul>
+        </nav>
+    </main>
+{% endblock %}

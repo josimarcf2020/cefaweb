@@ -1,0 +1,24 @@
+{% extends "padrao.html" %}
+{% block body %}
+    <main>
+        <div id="conteiner">                
+            <div id="saochiquim">
+                <img class="filho" src="./../static/img/saoChiquimSemFundo.png" alt="Imagem de São Francisco Mirim" width="80vw">
+            </div>
+            <div id="campos">
+                <fieldset class="filho">
+                    <legend>Identifique-se</legend>
+                    <div class="filho">
+                        <input class="input_login" type="email" name="email" placeholder="E-mail">
+                    </div>
+                    <div class="filho">
+                        <input class="input_login" type="password" name="senha" placeholder="Senha">
+                    </div>
+                    <div class="filho">
+                        <a href="/index"><input class="input_login" value="Autenticar acesso"></a>
+                    </div>
+                </fieldset>    
+            </div>
+        </div>
+    </main>
+{% endblock %}

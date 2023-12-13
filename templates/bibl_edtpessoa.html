@@ -1,0 +1,142 @@
+{% extends "padrao.html" %}
+{% block body %}
+    <main>
+        <form class="form_cadastro" action="/biblioteca?#pessoas">
+            <p class="titulo_pagina">Cadastro de Pessoas</p>
+            
+            <div class="form-row">
+                <div class="form-group col-md-1">
+                    <label for="idpessoa">ID</label>
+                    <input type="text" class="form-control" id="idpessoa" placeholder="ID da Pessoa" enabled="false">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="cpfpessoa">CPF</label>
+                    <input type="text" class="form-control" id="cpfpessoa" placeholder="CPF do Cliente" enabled="false">
+                </div>
+                <div class="form-group col-md-9">
+                    <label for="nomepessoa">Nome</label>
+                    <input type="text" class="form-control" id="nomepessoa" placeholder="Nome da pessoa">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="inputAddress">Endereço</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Nome da rua,av, praça e número da residência">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="inputAddress2">Endereço 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Complemento do Endereço, nome do condominio, vila...">
+                </div>    
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Cidade</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder=""Nome da Cidade">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputEstado">Estado</label>
+                    <select id="inputEstado" class="form-control">
+                        <option selected>Escolher...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputCEP">CEP</label>
+                    <input type="text" class="form-control" id="inputCEP">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="datanasc">Dt. Nascimento</label>
+                    <input type="date" class="form-control" id="datanasc" placeholder="Data de Nascimento">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputsexo">Sexo</label>
+                    <select id="inputsexo" class="form-control">
+                        <option selected>Escolher...</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputProf">Profissão</label>
+                    <input type="text" class="form-control" id="inputProf">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputAdmissao">Admissão</label>
+                    <input type="date" class="form-control" id="inputAdmissao">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputStatus">Status</label>
+                    <input type="text" class="form-control" id="inputStatus">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="emailpessoa">E-mail</label>
+                    <input type="email" class="form-control" id="emailpessoa" placeholder="Email da pessoa">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputcontato">Telefones</label>
+                    <input type="text" class="form-control" id="inputcontato" placeholder="Telefones de contato da pessoa">
+                </div>
+                <div class="form-group col-md-4">
+                    <fieldset id="vinculo_cefa">
+                        <legend> Vínculo com o CEFA</legend>
+                        <input type="checkbox" class="form-check-input" id="checkEstutante">
+                        <label class="form-check-label" for="exampleCheck1">Estudante</label>
+                        <input type="checkbox" class="form-check-input" id="checkTrabalhador">
+                        <label class="form-check-label" for="exampleCheck1">Trabalhador</label>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <fieldset id="vinculo_cefa">
+                        <legend> Habilitações</legend>
+                        <input type="checkbox" class="form-check-input" id="checkEstutante">
+                        <label class="form-check-label" for="exampleCheck1">Passe</label>
+                        <input type="checkbox" class="form-check-input" id="checkTrabalhador">
+                        <label class="form-check-label" for="exampleCheck1">Mediúnica</label>
+                        <input type="checkbox" class="form-check-input" id="checkTrabalhador">
+                        <label class="form-check-label" for="exampleCheck1">Mediador</label>
+                    </fieldset>
+                </div>
+                <div class="form-group col-md-4">
+                    <fieldset id="vinculo_cefa">
+                        <legend> Cursos</legend>
+                        <input type="checkbox" class="form-check-input" id="checkEstutante">
+                        <label class="form-check-label" for="exampleCheck1">Esde I</label>
+                        <input type="checkbox" class="form-check-input" id="checkTrabalhador">
+                        <label class="form-check-label" for="exampleCheck1">Esde II</label>
+                        <input type="checkbox" class="form-check-input" id="checkTrabalhador">
+                        <label class="form-check-label" for="exampleCheck1">Esde III</label>
+                        <input type="checkbox" class="form-check-input" id="checkTrabalhador">
+                        <label class="form-check-label" for="exampleCheck1">Passista</label>
+                    </fieldset>
+                </div>
+                <div class="form-group col-md-4">
+                    <fieldset id="vinculo_cefa">
+                        <legend> Atividades</legend>
+                        <input type="checkbox" class="form-check-input" id="checkEstutante">
+                        <label class="form-check-label" for="exampleCheck1">Quem tem Fome tem Pressa</label>
+                        <input type="checkbox" class="form-check-input" id="checkTrabalhador">
+                        <label class="form-check-label" for="exampleCheck1">Idosos</label>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="textareaObservacoes">Observações</label>
+                    <textarea class="form-control" id="textareaObservacoes" rows="3"></textarea>
+                  </div>
+            </div>
+            <div class="btcadastrar">
+                <button type="#" class="btn btn-primary">Cadastrar e continuar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar e finalizar</button>
+            </div>
+        </form>
+    </main>
+{% endblock %}
